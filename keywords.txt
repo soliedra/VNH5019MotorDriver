@@ -1,0 +1,5 @@
+VNH5019MotorDriver			KEYWORD1
+writePWM				KEYWORD2
+setDirectionCW				KEYWORD2
+setDirectionCCW				KEYWORD2
+setBrake				KEYWORD2
