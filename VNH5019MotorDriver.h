@@ -35,14 +35,15 @@ class VNH5019MotorDriver : public MotorDriver
 //class VNH5019MotorDriver 
 {
 	public:
-		VNH5019MotorDriver(uint8_t pin_dcmoto_dirA = 5, uint8_t pin_dcmoto_dirB = 7, uint8_t pin_dcmoto_pwm = 6);
+		VNH5019MotorDriver(uint8_t pin_dcmoto_dirA = 5, uint8_t pin_dcmoto_dirB = 7, uint8_t pin_dcmoto_pwm = 6, uint8_t pin_current_sensing = A0);
 		
 		void writePWM(int pwmSpeed);
 		void setDirectionCW();
 		void setDirectionCCW();
 		void setBrake();
+		float getCurrent();
 		
 	private:	
-		uint8_t _pin_dcmoto_dirA, _pin_dcmoto_dirB, _pin_dcmoto_pwm;
+		uint8_t _pin_dcmoto_dirA, _pin_dcmoto_dirB, _pin_dcmoto_pwm, _pin_current_sensing;
 };
 #endif
