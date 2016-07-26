@@ -1,33 +1,29 @@
-# ArduinoMotorShieldDriver
+# VNH5019MotorDriver
  <p>
  Implementation of [MotorDriver](https://github.com/soliedra/MotorDriver) 
- for the ArduinoMotorShield.
+ for the [Pololu VNH5019 Motor Driver](https://www.pololu.com/product/1451).
  </p>
  <p> 
- This shield provides a dual driver controlled by channels A and B.
- In this case both channels have been connected in parallel to be able
- to deliver a maximum current of 4 Amps to the driven motor.
- </p>
-  
- <p>
- <h3>Connections:</h3>
- </p>
- <table>
- <tr>
- <td>Function</td><td>Channel A</td><td>Channel B</td>
- </tr>
- <tr>
- <td>Direction</td><td>D12</td><td>D13</td>
- </tr>
- <tr>
- <td>PWM</td><td>D5 (brigded to D3) </td><td>D11</td>
- </tr>
- </table>
- <p>
- When the Direction pins are HIGH the motor turns CCW and
- CW when LOW.
+ This diver can drive more tahn 30 Amps through a DC motor, control its speed using PWM, control
+ the direction, brake the motor and sense its current.
  </p>
  <p>
- Author: Javier Casado
- Licence: CC BY
+ ### Example driver connections
+<table>
+<tr><td>Function</td><td>Pin</td></tr>
+<tr><td>Direction A (CW) </td><td>D5</td></tr>
+<tr><td>Direction B (CCW) </td><td>D7</td></tr>
+<tr><td>PMW</td><td>D6</td></tr>
+<tr><td>Current sensing</td><td>A1</td></tr>
+</table>
+</p>
+<p>
+When the directionA pin is HIGH and directionB LOW the motor turns CW.
+When the directionB pin is HIGH and directionA LOW the motor turns CCW.
+When the direction pins are both HIGH the motor brake to Vcc is set (very effective).
+When the direction pins are both LOW the motor brake to GND is set.
+</p>
+<p>  
+Author: Javier Casado
+License: CC BY
 </p>
