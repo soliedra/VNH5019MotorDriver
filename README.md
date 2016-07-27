@@ -4,7 +4,7 @@
  for the [Pololu VNH5019 Motor Driver](https://www.pololu.com/product/1451).
  </p>
  <p> 
- This diver can drive more tahn 30 Amps through a DC motor, control its speed using PWM, control
+ This diver can drive more than 30 Amps through a DC motor, control its speed using PWM, control
  the direction, brake the motor and sense its current.
  </p>
  <p>
@@ -23,6 +23,15 @@ When the directionB pin is HIGH and directionA LOW the motor turns CCW.
 When the direction pins are both HIGH the motor brake to Vcc is set (very effective).
 When the direction pins are both LOW the motor brake to GND is set.
 </p>
+<p>
+ It contains the following methods:
+ <ul>
+ <li>writePWM(int pwmSpeed), sets the motor speed where 0 <= pwmSpeed <= 255</li>
+ <li>setDirectionCW() sets the CW direction</li>
+ <li>setDirectionCCW() sets the CCW direction</li>
+ <li>setBrake() brakes the motor</li>
+ <li>float getCurrent() returns the Amps through the motor.</li>
+ </ul>
 <p>  
 Author: Javier Casado
 License: CC BY
